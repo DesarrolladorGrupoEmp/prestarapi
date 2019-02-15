@@ -85,8 +85,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    margin-top: 16px;
-    margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 abbr[title],
@@ -206,8 +206,8 @@ figure {
 }
 
 img {
-    vertical-align: middle;
-    border-style: none;
+  vertical-align: middle;
+  border-style: none;
 }
 
 svg:not(:root) {
@@ -594,13 +594,13 @@ pre code {
 }
 
 .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .no-gutters {
@@ -8732,6 +8732,7 @@ button.bg-dark:focus {
 }
 
 .text-left {
+  text-align: left !important;
 }
 
 .text-right {
