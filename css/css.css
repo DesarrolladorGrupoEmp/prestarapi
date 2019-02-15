@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  margin: 0;
+}
+
+header{
+	background-color: #FFA840;
+  
+
+}
+
+.arriba {
+	width: 1170px;
+	height: 60px;
+	margin-left: auto;
+    margin-right: auto;
+	
+}
+.arriba_2 {
+    float: left;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+.arriba_2 img {
+    float: left;
+}
+
+.arriba_2 p {
+    float: left;
+    width: 301px;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.arriba_3 {
+    float: right;
+    margin-right: 20px;
+    margin-top: 19px;
+}
