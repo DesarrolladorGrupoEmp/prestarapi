@@ -1,28 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="estiloscss.css">
     <title>Presta Rapi</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
-    <link href="css/cssmio.css" rel="stylesheet">
     <!-- JQuery-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!-- JavaScript-->
-    <script>
-    //Funcion para los dias
+  </head>
+  <script>
+    //Funcion para el monto
       $( function() {
         $( "#slider-range-min" ).slider({
           range: "min",
           step: 10000,
-          value: 37,
+          value: 100000,
           min: 100000,
           max: 500000,
           slide: function( event, ui ) {
@@ -31,9 +30,24 @@
         });
         $( "#amount" ).val( '$' + $( "#slider-range-min" ).slider( "value" ) );
       } );
-    </script>
-<!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
+
+    //Funcion para los dias
+      $( function() {
+        $( "#slider-range-min2" ).slider({
+          range: "min",
+          step: 1,
+          value: 4,
+          min: 4,
+          max: 30,
+          slide: function( event, ui ) {
+            $( "#amount2" ).val(  ui.value );
+          }
+        });
+        $( "#amount2" ).val( + $( "#slider-range-min2" ).slider( "value" ) );
+      } );
+
+ //Smartsupp Live Chat script
+
 var _smartsupp = _smartsupp || {};
 _smartsupp.key = '1bd189848695f858a608e9d5180c18a3760164f1';
 window.smartsupp||(function(d) {
@@ -47,99 +61,127 @@ window.smartsupp||(function(d) {
     src: 'favicon.png'
   })
 </script>
-</head>
-<body>
-  <header id="navcolor">
-    <div class="container col-11">
-      <nav  class="navbar navbar-expand-lg navbar-dark">
-     
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		      <img src="images/iconwhatsapp.png" class="rounded float-left" alt="...">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active"> <a class="nav-link text-white">313 478 52 77</a> </li>
-              <li class="nav-item">
-                <a class="nav-link text-white">Comienza tu sueño AHORA!</a>
-              </li>
-
-              <li class="nav-item">
-                <button id="btnnav" type="button" class="btn btn-success">Registrate</button>
-              </li>
-            </ul>
-          <form  class="rounded form-inline my-2 my-lg-0">
-            <img src="images/iconreg.png" class="rounded float-left" alt="...">
-            <a class="nav-link text-white">Ingresa</a>
+  <body>
+	  
+  <!-- header -->
+	  
+ <div id="colordefondo" class="container-fluid">
+		  <div  class="container ">
+			  
+			 <div class="row"> 
+			 <div class="col-md-12 col-xs-12 col-lg-4 mb-2 mt-2">
+             <img src="images/iconwhatsapp.png" class="mr-1" alt="...">
+			 <a class="text-white">313 478 5277</a>
+		     <button type="button" class="btn btn-success ml-2 mt-1">Registrarse</button>
+			 </div>
+				 
+				 
+			 <div class="col-md-12 col-xs-12 col-lg-8 mb-2 mt-2">
+				 
+				 
+				<form class="form-inline">
+				<img src="images/iconreg.png" class="rounded float-left" alt="..."> 
+  <div class="form-group">
+  </div>
+  <div class="form-group mr-1 mx-sm-3 ">
+    <label for="inputPassword2" class="sr-only">Usuario</label>
+    <input class="form-control mr-1" id="inputPassword2" placeholder="Usuario">
+	<label for="inputPassword2" class="sr-only">Clave</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Clave">
+  </div>
+  <button type="submit" class="btn btn-success">Entrar</button>
+  <a href="#" class="text-white ml-3 font-italic card-link">Olvidé la contraseña</a>
 			
-            <input id="bordebtn" class="form-control form-control-sm mr-sm-2" type="search" placeholder="Cédula" aria-label="Search">
-		        <input id="bordebtn" class="form-control form-control-sm mr-sm-2" type="search" placeholder="Clave" aria-label="Search">
-            <a class="nav-link text-white font-italic " href="#">Olvidé la contraseña <span class="sr-only">(current)</span></a>
-          </form>
-        </div>
-      </nav>
-    </div>
-		<div class="container-fluid p mb-2 bg-light text-dark">
-      <div class="container p-3 mb-2 bg-light text-dark">
-		    <div class="row">
-          <div class="col-7"><img src="images/logo.png" class="img-fluid" alt="Responsive image"></div>
-				  
-				  
-				  
-        <div class="col-5">
-				  
-			<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+</form> 
+</div>
+</div> 
+</div>
+</div>
+	  
+<div id="colordefondo2" class="container-fluid">
+<div  class="container ">
+<div class="row"> 
+	
+	
+	
+<div class="col-md-12 col-xs-12 col-lg-4 mb-2 mt-2">
+<img class="img-fluid" src="images/logo.svg" width="150px" height="100%" alt="">
+
+	</div>	
+<div class="col-md-12 col-xs-12 col-lg-8 mb-2 mt-2">
+	
+<nav class="navbar navbar-expand-lg navbar-light ">
+	<a class="navbar-brand ml-lg-4" href="#">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Quiénes somos<span class="sr-only">(current)</span></a>
       </li>
-      </ul>
-      </div>
-      </nav>	  
-      </div>
-				  
-				  
-  
-      </div>
-			  </div>
-		 	  
-		  </div>
-  </header>
+ <li class="nav-item active">
+        <a class="nav-link" href="#">¿Cómo funciona?<span class="sr-only">(current)</span></a>
+      </li>
+		 <li class="nav-item active">
+        <a class="nav-link" href="#">Beneficios<span class="sr-only">(current)</span></a>
+      </li>
+		 <li class="nav-item active">
+        <a class="nav-link" href="#">Cómo aplicar<span class="sr-only">(current)</span></a>
+      </li>
+		<li class="nav-item active">
+        <a class="nav-link" href="#">Contáctenos<span class="sr-only">(current)</span></a>
+      </li>
+		 
+    </ul>
 
-    <div id="barverde" class="container-fluid">
-    <div class="container">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center text-white navbar-nav navbar ">
-            <h4>Préstamos online desde $100.000 hasta $500.000. Desde donde estés a cualquier hora.</h4>
-          </div>
-        </div>
-      </div>
-		</div>
-    </div> 
+  </div>
+</nav>	
+</div>
 
-    <section>
-      <div class="jumbotron text-center mt-2">
-        <div class="container">
-          <div class="row">
-            <div class="col-2">
-            </div>
-            <div class="col-3">
+</div>
+</div>
+	
+</div>
+<div id="colordefondo3" class="container-fluid">
+<div class="container">
+<div class="row"> 	
+<div class="mt-2 mb-2 col-12 text-center"><h3 class="text-white mt-3">Préstamos online desde $100.000 hasta $500.000. Donde estés a cualquier hora</h3>
+</div>
+</div>
+</div>
+ </div>
+	  
+	  
+<div id="colordefondoreq" class="container-fluid">
+<div class="container">
+<div class="row"> 	
+<div class="col-1"></div>
+	<div class="col-md-12 col-xs-12 col-lg-3 mb-2 mt-2">
+	
+	<h3 id="colorreq" class="font-weight-bolder font-italic">Requisitos</h3>
+	<h5 class="font-italic text-white">Para aplicar al prestamo</h5>
+	</div>
+	<div class="col-md-12 col-xs-12 col-lg-7 mb-2 mt-2">
+	
+	<img class="img-fluid" src="images/reqi.png" width="600px" height="100%" alt="">
+	</div>
+	<div class="col-1"></div>
+
+	</div>
+	</div>
+	</div>
+	  
+	  
+	<div id="fondima" classs"container-fluid">
+
+		<div class="container">
+	<div class="row"> 	
+	<div class="p-4 mb-2 mt-2 col-md-12 col-xs-12 col-lg-6">
+	
+        <div id="cajas">
+		<div id="bordes" class="pt-4 pb-3 pl-3 pr-3">
               <p>
                 <label for="amount">¿Cuanto dinero necesitas?</label>
                 <label class="text-left">Minimo $100.000</label>
@@ -148,158 +190,98 @@ window.smartsupp||(function(d) {
               </p>
  
               <div id="slider-range-min"></div>
-            </div>
-            <div class="col-2">
-            </div>
-            <div class="col-3">
-              <h1>Revisa tu credito</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, deleniti, ea nisi suscipit atque tempore aspernatur harum unde veritatis neque rem dolores assumenda. Recusandae facilis dolores cum iste assumenda accusamus.</p>
-              <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-            </div>
-            <div class="col-2">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		</div>	
+		</div>
+		
+		
+			
+        <div id="cajas" class="mt-3">
+		<div class="pt-4 pb-3 pl-3 pr-3">
+              <p>
+                <label for="amount2">¿Cuando puedes pagarlo?</label>
+                <label class="text-left">Minimo 4 dias</label>
+                <label class="text-right">Maximo 30 dias</label>
+                <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+              </p>
+ 
+              <div id="slider-range-min2"></div>
+		</div>	
+	
+	
+	</div>
+		</div>
+		
+			<div class="p-4 mb-2 mt-2 col-md-12 col-xs-12 col-lg-6">
+	
+        <div id="cajas">
+		<div class="pt-4 pb-3 pl-3 pr-3">
+		<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take.
+			
+		But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take.   
+			
+		is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again. is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequencesconsequ.
+			
+			</p>	
+		</div>	
+		</div>
 
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h1>Lorem ipsum dolor sit amet</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, magni, doloribus, possimus eum sapiente deleniti doloremque fugit ut expedita molestiae iusto debitis eveniet modi obcaecati ipsam quos quis labore dicta.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container mt-2">
-        <div class="row">
-          <div class="col-md-4 col-12">
-            <ul class="list-unstyled">
-              <li class="media">
-                <img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image">
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">List-based media object</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-12">
-            <ul class="list-unstyled">
-              <li class="media">
-                <img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image">
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">List-based media object</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-12">
-            <ul class="list-unstyled">
-              <li class="media">
-                <img class="mr-3" src="images/35X35.gif" alt="Generic placeholder image">
-                <div class="media-body">
-                  <h5 class="mt-0 mb-1">List-based media object</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h2>Latest Work</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, et, placeat !</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-12 text-center">
-            <img class="img-fluid" src="images/400x400.gif" alt="">
-            <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
-            <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
-          </div>
-          <div class="col-md-6 col-12 text-center mt-md-0 mt-2">
-            <img class="img-fluid" src="images/400x400.gif" alt="">
-            <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
-            <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
-          </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col-md-3 col-6"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
-          <div class="col-md-3 col-6"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
-          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
-          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-md-3 col-6"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
-          <div class="col-md-3 col-6"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
-          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="images/200x200.gif" alt=""></div>
-          <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="images/200x200.gif" alt=""></div>
-        </div>
-      </div>
-    </section>
-    <hr>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h1>Lorem ipsum dolor sit amet</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, magni, doloribus, possimus eum sapiente deleniti doloremque fugit ut expedita molestiae iusto debitis eveniet modi obcaecati ipsam quos quis labore dicta.</p>
-            <button type="button" class="btn btn-success">Get in touch</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-12">
-            <h3 class="text-center">WHO WE ARE</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ducimus, sit, quibusdam quidem recusandae veniam eos quod error nisi repellat excepturi laboriosam aspernatur suscipit possimus consectetur dolores nihil labore quas eius illo accusamus nulla sed blanditiis porro accusantium. Perspiciatis, perferendis!</p>
-          </div>
-          <div class="col-md-4 col-12">
-            <h3 class="text-center">GET IN TOUCH</h3>
-            <address class="text-center">
-              <strong>MyCompany, Inc.</strong><br>
-              Sunny Autumn Plaza, Grand Coulee,<br>
-              CA, 91308-4075, US<br>
-              <abbr title="Phone">P:</abbr> (123) 456-7890
-            </address>
-          </div>
-          <div class="col-md-4 col-12">
-            <h3 class="text-center">NEWSLETTER</h3>
-            <form>
-              <div class="form-group col-12">
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                <button type="submit" class="btn btn-dark mt-2">Subscribe</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+	</div>
+		
+<div class="container-fluid">
+<div class="container">
+<div class="row"> 	
+<div class="mt-5 mb-4 col-12 text-center"><h4 class=" font-italic mt-3">SOLICITAR TU CRÉDITO ES MUY SENCILLO, SOLO DEBES<h1 class=" font-weight-bolder font-italic mt-3"><span style="color:#0E8D2D">SEGUIR ESTOS </span><span style="color:#FDBA4E"> SENCILLOS PASOS:</span></h1></h4>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+		
+<div id="colordefondo3" class="container-fluid">
+<div class="container">		
+<div class="row "> 			
+		
+    <div class="col-md-12 col-xs-12 col-lg-4">
+	
+	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
+	
+	</div>
+	
+	<div class="col-md-12 col-xs-12 col-lg-4">
+	
+	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
+	
+	</div>
+	
+	<div class="col-md-12 col-xs-12 col-lg-4">
+	
+	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
+	
+	</div>
+	
+	<div class="col-md-12 col-xs-12 col-lg-4">
+	
+	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
+	
+	</div>
+	
+	<div class="col-md-12 col-xs-12 col-lg-4">
+	
+	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
+	
+	</div>
+	
+	<div class="col-md-12 col-xs-12 col-lg-4">
+	
+	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
+	
     </div>
-    <hr>
-    <footer class="text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p>Copyright © MyCompany. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap-4.0.0.js"></script>
+</div>
+</div>
+</div>		
+</div>
+</div>
   </body>
 </html>

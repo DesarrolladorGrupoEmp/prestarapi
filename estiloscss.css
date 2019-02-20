@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#colordefondo{
+	background: rgba(247,148,31,1);
+	background-image: url("images/nav.jpg")
+}
+
+
+#colordefondo2{
+	background-color: #ffffff;
+
+}
+
+
+#colordefondo3{
+	background-color: #0E8D2D;
+
+}
+
+
+#colordefondoreq{
+	background-color: #ffa841;
+
+}
+
+#colorreq{
+	
+	color:#0E8D2D;
+	
+
+}
+
+
+#imafon{
+	
+	background-image: url("images/fondo.jpg")
+		
+		
+}
+
+
+#cajas{
+    background-color:#ffffff;
+	border-radius: 6px;
+	box-shadow: 0 0 20px #cccccc;
+
+}
+
+#fondima{
+  background-image: url("images/fondo.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 750px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+
