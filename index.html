@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Presta Rapi</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
     <link href="css/cssmio.css" rel="stylesheet">
@@ -19,15 +21,27 @@
       $( function() {
         $( "#slider-range-min" ).slider({
           range: "min",
+          step: 10000,
           value: 37,
-          min: 1,
-          max: 30,
+          min: 100000,
+          max: 500000,
           slide: function( event, ui ) {
-            $( "#amount" ).val( ui.value );
+            $( "#amount" ).val( '$' + ui.value );
           }
         });
-        $( "#amount" ).val( $( "#slider-range-min" ).slider( "value" ) );
+        $( "#amount" ).val( '$' + $( "#slider-range-min" ).slider( "value" ) );
       } );
+    </script>
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+      var _smartsupp = _smartsupp || {};
+      _smartsupp.key = '1bd189848695f858a608e9d5180c18a3760164f1';
+      window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+      })(document);
     </script>
 </head>
 <body>
@@ -123,7 +137,9 @@
             </div>
             <div class="col-3">
               <p>
-                <label for="amount">Dias de plazo:</label>
+                <label for="amount">¿Cuanto dinero necesitas?</label>
+                <label class="text-left">Minimo $100.000</label>
+                <label class="text-right">Maximo $500.000</label>
                 <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
               </p>
  
@@ -132,7 +148,7 @@
             <div class="col-2">
             </div>
             <div class="col-3">
-              <h1>Lorem ipsum dolor sit.</h1>
+              <h1>Revisa tu credito</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, deleniti, ea nisi suscipit atque tempore aspernatur harum unde veritatis neque rem dolores assumenda. Recusandae facilis dolores cum iste assumenda accusamus.</p>
               <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
             </div>
