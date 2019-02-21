@@ -1,187 +1,145 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="estiloscss.css">
-    <title>Presta Rapi</title>
-    <!-- JQuery-->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  </head>
-  <script>
-    //Funcion para el monto
-      $( function() {
-        $( "#slider-range-min" ).slider({
-          range: "min",
-          step: 10000,
-          value: 100000,
-          min: 100000,
-          max: 500000,
-          slide: function( event, ui ) {
-            $( "#amount" ).val( '$' + ui.value );
-          }
-        });
-        $( "#amount" ).val( '$' + $( "#slider-range-min" ).slider( "value" ) );
-      } );
-
-    //Funcion para los dias
-      $( function() {
-        $( "#slider-range-min2" ).slider({
-          range: "min",
-          step: 1,
-          value: 4,
-          min: 4,
-          max: 30,
-          slide: function( event, ui ) {
-            $( "#amount2" ).val(  ui.value );
-          }
-        });
-        $( "#amount2" ).val( + $( "#slider-range-min2" ).slider( "value" ) );
-      } );
-
- //Smartsupp Live Chat script
-
-var _smartsupp = _smartsupp || {};
-_smartsupp.key = '1bd189848695f858a608e9d5180c18a3760164f1';
-window.smartsupp||(function(d) {
-  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-  c.type='text/javascript';c.charset='utf-8';c.async=true;
-  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-})(document);
-  // banner (logo)
-  smartsupp('banner:set', 'image', {
-    src: 'favicon.png'
-  })
-</script>
-  <body>
-	  
-  <!-- header -->
-	  
- <div id="colordefondo" class="container-fluid">
-		  <div  class="container ">
-			  
-			 <div class="row"> 
-			 <div class="col-md-12 col-xs-12 col-lg-4 mb-2 mt-2">
-             <img src="images/iconwhatsapp.png" class="mr-1" alt="...">
-			 <a class="text-white">313 478 5277</a>
-		     <button type="button" class="btn btn-success ml-2 mt-1">Registrarse</button>
-			 </div>
-				 
-				 
-			 <div class="col-md-12 col-xs-12 col-lg-8 mb-2 mt-2">
-				 
-				 
-				<form class="form-inline">
-				<img src="images/iconreg.png" class="rounded float-left" alt="..."> 
-  <div class="form-group">
-  </div>
-  <div class="form-group mr-1 mx-sm-3 ">
-    <label for="inputPassword2" class="sr-only">Usuario</label>
-    <input class="form-control mr-1" id="inputPassword2" placeholder="Usuario">
-	<label for="inputPassword2" class="sr-only">Clave</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Clave">
-  </div>
-  <button type="submit" class="btn btn-success">Entrar</button>
-  <a href="#" class="text-white ml-3 font-italic card-link">Olvidé la contraseña</a>
-			
-</form> 
-</div>
-</div> 
-</div>
-</div>
-	  
-<div id="colordefondo2" class="container-fluid">
-<div  class="container ">
-<div class="row"> 
-	
-	
-	
-<div class="col-md-12 col-xs-12 col-lg-4 mb-2 mt-2">
-<img class="img-fluid" src="images/logo.svg" width="150px" height="100%" alt="">
-
-	</div>	
-<div class="col-md-12 col-xs-12 col-lg-8 mb-2 mt-2">
-	
-<nav class="navbar navbar-expand-lg navbar-light ">
-	<a class="navbar-brand ml-lg-4" href="#">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Quiénes somos<span class="sr-only">(current)</span></a>
-      </li>
- <li class="nav-item active">
-        <a class="nav-link" href="#">¿Cómo funciona?<span class="sr-only">(current)</span></a>
-      </li>
-		 <li class="nav-item active">
-        <a class="nav-link" href="#">Beneficios<span class="sr-only">(current)</span></a>
-      </li>
-		 <li class="nav-item active">
-        <a class="nav-link" href="#">Cómo aplicar<span class="sr-only">(current)</span></a>
-      </li>
-		<li class="nav-item active">
-        <a class="nav-link" href="#">Contáctenos<span class="sr-only">(current)</span></a>
-      </li>
-		 
-    </ul>
-
-  </div>
-</nav>	
-</div>
-
-</div>
-</div>
-	
-</div>
-<div id="colordefondo3" class="container-fluid">
-<div class="container">
-<div class="row"> 	
-<div class="mt-2 mb-2 col-12 text-center"><h3 class="text-white mt-3">Préstamos online desde $100.000 hasta $500.000. Donde estés a cualquier hora</h3>
-</div>
-</div>
-</div>
- </div>
-	  
-	  
-<div id="colordefondoreq" class="container-fluid">
-<div class="container">
-<div class="row"> 	
-<div class="col-1"></div>
-	<div class="col-md-12 col-xs-12 col-lg-3 mb-2 mt-2">
-	
-	<h3 id="colorreq" class="font-weight-bolder font-italic">Requisitos</h3>
-	<h5 class="font-italic text-white">Para aplicar al prestamo</h5>
+	<head>
+		<!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <!-- Bootstrap CSS -->
+	   	<link rel="stylesheet" href="slidertestimonios/css/sss.css">
+	   	<link rel="stylesheet" href="slidertestimonios/css/estilos.css">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    	<!-- JQuery-->
+    	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    	<link rel="stylesheet" href="/resources/demos/style.css">
+    	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	   	<script src="slidertestimonios/css/sss.js"></script>
+	   	<script src="js/funciones.js"></script>
+	    <link rel="stylesheet" href="css/estilos.css">
+	    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	    <title>Presta Rapi</title>
+	  </head>
+	  <body>
+		  
+	  <!-- header -->
+		  
+	 <div id="colordefondo" class="container-fluid">
+			  <div  class="container ">
+				  
+				 <div class="row"> 
+				 <div class="col-md-12 col-xs-12 col-lg-4 mb-2 mt-2">
+	             <img src="images/iconwhatsapp.png" class="mr-1" alt="...">
+				 <a class="text-white">313 478 5277</a>
+			     <button type="button" class="btn btn-success ml-2 mt-1">Registrarse</button>
+				 </div>
+					 
+					 
+				 <div class="col-md-12 col-xs-12 col-lg-8 mb-2 mt-2">
+					 
+					 
+					<form class="form-inline">
+					<img src="images/iconreg.png" class="rounded float-left" alt="..."> 
+	  <div class="form-group">
+	  </div>
+	  <div class="form-group mr-1 mx-sm-3 ">
+	    <label for="inputPassword2" class="sr-only">Usuario</label>
+	    <input class="form-control mr-1" id="inputPassword2" placeholder="Usuario">
+		<label for="inputPassword2" class="sr-only">Clave</label>
+	    <input type="password" class="form-control" id="inputPassword2" placeholder="Clave">
+	  </div>
+	  <button type="submit" class="btn btn-success">Entrar</button>
+	  <a href="#" class="text-white ml-3 font-italic card-link">Olvidé la contraseña</a>
+				
+	</form> 
 	</div>
-	<div class="col-md-12 col-xs-12 col-lg-7 mb-2 mt-2">
-	
-	<img class="img-fluid" src="images/reqi.png" width="600px" height="100%" alt="">
+	</div> 
 	</div>
-	<div class="col-1"></div>
+	</div>
+		  
+	<div id="colordefondo2" class="container-fluid">
+	<div  class="container ">
+	<div class="row"> 
+		
+		
+		
+	<div class="col-md-12 col-xs-12 col-lg-4 mb-2 mt-2">
+	<img class="img-fluid" src="images/logo.svg" width="150px" height="100%" alt="">
+
+		</div>	
+	<div class="col-md-12 col-xs-12 col-lg-8 mb-2 mt-2">
+		
+	<nav class="navbar navbar-expand-lg navbar-light ">
+		<a class="navbar-brand ml-lg-4" href="#">Home</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Quiénes somos<span class="sr-only">(current)</span></a>
+	      </li>
+	 <li class="nav-item active">
+	        <a class="nav-link" href="#">¿Cómo funciona?<span class="sr-only">(current)</span></a>
+	      </li>
+			 <li class="nav-item active">
+	        <a class="nav-link" href="#">Beneficios<span class="sr-only">(current)</span></a>
+	      </li>
+			 <li class="nav-item active">
+	        <a class="nav-link" href="#">Cómo aplicar<span class="sr-only">(current)</span></a>
+	      </li>
+			<li class="nav-item active">
+	        <a class="nav-link" href="#">Contáctenos<span class="sr-only">(current)</span></a>
+	      </li>
+			 
+	    </ul>
+
+	  </div>
+	</nav>	
+	</div>
 
 	</div>
 	</div>
+		
 	</div>
-	  
-	  
-	<div id="fondima" classs"container-fluid">
-
-		<div class="container">
+	<div id="colordefondo3" class="container-fluid">
+	<div class="container">
 	<div class="row"> 	
-	<div class="p-4 mb-2 mt-2 col-md-12 col-xs-12 col-lg-6">
-	
-        <div id="cajas">
-		<div id="bordes" class="pt-4 pb-3 pl-3 pr-3">
+	<div class="mt-2 mb-2 col-12 text-center"><h3 class="text-white mt-3">Préstamos online desde $100.000 hasta $500.000. Donde estés a cualquier hora</h3>
+	</div>
+	</div>
+	</div>
+	 </div>
+		  
+		  
+	<div id="colordefondoreq" class="container-fluid">
+	<div class="container">
+	<div class="row"> 	
+	<div class="col-1"></div>
+		<div class="col-md-12 col-xs-12 col-lg-3 mb-2 mt-2">
+		
+		<h3 id="colorreq" class="font-weight-bolder font-italic">Requisitos</h3>
+		<h5 class="font-italic text-white">Para aplicar al prestamo</h5>
+		</div>
+		<div class="col-md-12 col-xs-12 col-lg-7 mb-2 mt-2">
+		
+		<img class="img-fluid rounded mx-auto d-block" src="images/reqi.png" width="600px" height="100%" alt="">
+		</div>
+		<div class="col-1"></div>
+
+		</div>
+		</div>
+		</div>
+		  
+		  
+		<div id="fondima" classs"container-fluid">
+
+			<div class="container">
+		<div class="row"> 	
+		<div class="p-4 mb-2 mt-2 col-md-12 col-xs-12 col-lg-6">
+		
+	        <div id="cajas">
+			<div id="bordes" class="pt-4 pb-3 pl-3 pr-3">
               <p>
                 <label for="amount">¿Cuanto dinero necesitas?</label>
                 <label class="text-left">Minimo $100.000</label>
@@ -189,99 +147,269 @@ window.smartsupp||(function(d) {
                 <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
               </p>
  
-              <div id="slider-range-min"></div>
-		</div>	
-		</div>
-		
-		
+              <div id="slider-monto"></div>
+			</div>	
+			</div>
 			
-        <div id="cajas" class="mt-3">
-		<div class="pt-4 pb-3 pl-3 pr-3">
+			
+				
+	        <div id="cajas" class="mt-3">
+			<div class="pt-4 pb-3 pl-3 pr-3">
               <p>
-                <label for="amount2">¿Cuando puedes pagarlo?</label>
+                <label for="dias">¿Cuando puedes pagarlo?</label>
                 <label class="text-left">Minimo 4 dias</label>
                 <label class="text-right">Maximo 30 dias</label>
-                <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                <input type="text" id="dias" readonly style="border:0; color:#f6931f; font-weight:bold;">
               </p>
  
-              <div id="slider-range-min2"></div>
-		</div>	
-	
-	
-	</div>
-		</div>
+              <div id="slider-dias"></div>
+			</div>	
 		
-			<div class="p-4 mb-2 mt-2 col-md-12 col-xs-12 col-lg-6">
-	
-        <div id="cajas">
-		<div class="pt-4 pb-3 pl-3 pr-3">
-		<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take.
-			
-		But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take.   
-			
-		is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again. is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequencesconsequ.
-			
-			</p>	
-		</div>	
+		
 		</div>
+			</div>
+			
+				<div class="p-4 mb-2 mt-2 col-md-12 col-xs-12 col-lg-6">
+		
+	        <div id="cajas">
+			<div class="pt-4 pb-3 pl-3 pr-3">
+			<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take.
+				
+			But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take.   
+				
+			is pleasure, but  because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again. is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequencesconsequ.
+				
+				</p>	
+			</div>	
+			</div>
+
+		</div>
+			
+	<div class="container-fluid">
+	<div class="container">
+	<div class="row"> 	
+	<div class="mt-4 mb-4 col-12 text-center"><h4 class=" font-italic mt-3"><span style="color:#000000">SOLICITAR TU CRÉDITO ES MUY SENCILLO, SOLO DEBES</span><h1 class=" font-weight-bolder font-italic mt-3"><span style="color:#000000">SEGUIR ESTOS </span><span style="color:#FDBA4E"> SENCILLOS PASOS:</span></h1></h4>
 
 	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+			
+	<div id="colordefondo3" class="container-fluid">
+	<div class="container">		
+	<div class="row "> 			
+			
+	    <div class="col-md-12 col-xs-12 col-lg-4">
 		
-<div class="container-fluid">
-<div class="container">
-<div class="row"> 	
-<div class="mt-5 mb-4 col-12 text-center"><h4 class=" font-italic mt-3">SOLICITAR TU CRÉDITO ES MUY SENCILLO, SOLO DEBES<h1 class=" font-weight-bolder font-italic mt-3"><span style="color:#0E8D2D">SEGUIR ESTOS </span><span style="color:#FDBA4E"> SENCILLOS PASOS:</span></h1></h4>
+		<div class="p-4 mb-2 mt-2" >
+		<img class="img-fluid rounded mx-auto d-block" src="images/Recurso 1.png" width="200px" height="200px" alt="">
+		<h4 class="text-center text-white font-italic">CALCULA Y SOLICITA TU CRÉDITO</h4>	
+		
+		</div>
+		
+		</div>
+		
+		<div class="col-md-12 col-xs-12 col-lg-4">
+		
+		<div class="p-4 mb-2 mt-2" >
+			<img class="img-fluid rounded mx-auto d-block" src="images/Recurso 2.png" width="200px" height="200px" alt="">
+			<h4 class="text-center text-white font-italic">INGRESA Y  VALIDA TUS DATOS</h4>	
+			</div>
+		
+		</div>
+		
+		<div class="col-md-12 col-xs-12 col-lg-4">
+		
+		<div class="p-4 mb-2 mt-2" ><img class="img-fluid rounded mx-auto d-block" src="images/Recurso 3.png" width="200px" height="200%" alt="">
+			<h4 class="text-center text-white font-italic">RESULTADO DE TU SOLICITUD</h4>	
+			</div>
+		
+		</div>
+		
+		<div class="col-md-12 col-xs-12 col-lg-4">
+		
+		<div class="p-4 mb-2 mt-2" ><img class="img-fluid rounded mx-auto d-block" src="images/Recurso 4.png" width="200px" height="200px" alt="">
+			<h4 class="text-center text-white font-italic">CONTRATO Y CÓDIGO DE VERIFICACIÓN</h4>	
+			</div>
+		
+		</div>
+		
+		<div class="col-md-12 col-xs-12 col-lg-4">
+		
+		<div class="p-4 mb-2 mt-2" >
+		<img class="img-fluid rounded mx-auto d-block" src="images/Recurso 5.png" width="180px" height="180px" alt="">
+		<h4 class="text-center text-white font-italic">RETIRA TU DESEMBOLSO</h4>		
+		</div>
+		
+		</div>
+		
+		<div class="col-md-12 col-xs-12 col-lg-4">
+		
+		<div class="p-4 mb-2 mt-2" ><img class="img-fluid rounded mx-auto d-block" src="images/Recurso 6.png" width="200px" height="200px" alt="">
+		<h4 class="text-center text-white font-italic">PAGA TU CRÉDITO</h4>		
+			</div>
+		
+	    </div>
+	</div>
+	</div>
+	</div>	
 
+	<div class="container">
+         <div class="arrow">
+         	<div class="mt-4 mb-3"><h1 class="font-weight-bolder text-center"><span style="color:#FDBA4E">CASOS DE EXITO</span></h1><div> 
+
+<div class="mt-1 wrapper">
+		<div class="slider-testimonial">
+			<div class="testimonial-item">
+				<div class="testimonial-client">
+					<img src="slidertestimonios/client.png" alt="">
+					<p class="client-name">Carlos Gomez</p>
+				</div>
+				<div class="testimonial-text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, veritatis, similique! Ipsa quam vel repellendus, autem fugiat doloribus? Quam, velit.</p>
+				</div>
+			</div>
+			<div class="testimonial-item">
+				<div class="testimonial-client">
+					<img src="slidertestimonios/client.png" alt="">
+					<p class="client-name">Fernando Castro</p>
+				</div>
+				<div class="testimonial-text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ad hic, consectetur excepturi vero odio quae eos ratione ipsum aliquid.</p>
+				</div>
+			</div>
+			<div class="testimonial-item">
+				<div class="testimonial-client">
+					<img src="slidertestimonios/client.png" alt="">
+					<p class="client-name">Adrian Fernandez</p>
+				</div>
+				<div class="testimonial-text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non voluptate provident eum, itaque nihil. Minus eius nostrum, veritatis eos eum.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+
+
+<div id="aliados" class="container-fluid">
+    	<div class="container">
+    		<div class="row">
+    				<div class="col-md-12 col-xs-12 col-lg-3">
 		
-<div id="colordefondo3" class="container-fluid">
-<div class="container">		
-<div class="row "> 			
+		<div class="p-4 mb-2 mt-4" >
+		<h1 class="text-center font-italic font-weight-bolder" ><span style="color:#ffffff">ALIADOS</span></h1>		
+		</div>
 		
-    <div class="col-md-12 col-xs-12 col-lg-4">
-	
-	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
-	
-	</div>
-	
-	<div class="col-md-12 col-xs-12 col-lg-4">
-	
-	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
-	
-	</div>
-	
-	<div class="col-md-12 col-xs-12 col-lg-4">
-	
-	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
-	
-	</div>
-	
-	<div class="col-md-12 col-xs-12 col-lg-4">
-	
-	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
-	
-	</div>
-	
-	<div class="col-md-12 col-xs-12 col-lg-4">
-	
-	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
-	
-	</div>
-	
-	<div class="col-md-12 col-xs-12 col-lg-4">
-	
-	<div class="p-4 mb-2 mt-2" ><p class="text-center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give.</p></div>
-	
+		</div>
+		
+		<div class="col-md-12 col-xs-12 col-lg-3">
+		
+		<div class="p-4 mb-2 mt-2" ><img class="img-fluid rounded mx-auto d-block" src="images/Recurso 6.png" width="100px" height="200px" alt="">
+			
+			</div>
+		
+	    </div>
+
+	    <div class="col-md-12 col-xs-12 col-lg-3">
+		
+		<div class="p-4 mb-2 mt-2" ><img class="img-fluid rounded mx-auto d-block" src="images/Recurso 6.png" width="100px" height="200px" alt="">
+		
+			</div>
+		
+	    </div>
+
+	    <div class="col-md-12 col-xs-12 col-lg-3">
+		
+		<div class="p-4 mb-2 mt-2" ><img class="img-fluid rounded mx-auto d-block" src="images/Recurso 6.png" width="100px" height="200px" alt="">
+
+			</div>
+		
+	    </div>
+    		</div>
+    		
+    	</div>
+    	
     </div>
+		  
+
+<footer>
+	<div class="container">
+		<div class="row">
+
+    		<div class="col-md-12 col-xs-12 col-lg-3">
+				<div class="p-4 mb-2 mt-2" ><img class="img-fluid rounded mx-auto d-block" src="images/logo.svg" width="300px" height="400px" alt=""></div>
+			</div>
+		
+		
+			<div class="col-md-12 col-xs-12 col-lg-3">
+		
+				<div class="d-flex justify-content-center p-4 mb-2 mt-2" >
+					<ul class=" text-white list-unstyled">
+  							<p class="h4">Contáctenos</p>
+  						<li>
+   							 <ul>
+						      <li class="ml-4"><a href="#" class="alert-link">an example link</a></li>
+						      <li class="ml-4">Purus sodales ultricies</li>
+						      <li class="ml-4">Vestibulum laoreet</li>
+						      <li class="ml-4">Ac tristique libero</li>
+    						 </ul>
+  						</li>
+  
+					</ul>
+				</div>
+		
+	    	</div>
+
+	    	<div class="col-md-12 col-xs-12 col-lg-3">
+		
+				<div class="d-flex justify-content-center p-4 mb-2 mt-2" >
+					<ul class=" text-white list-unstyled">
+  							<p class="h4">Contáctenos</p>
+  						<li>
+   							 <ul>
+						      <li class="ml-4"><a href="#" class="alert-link">an example link</a></li>
+						      <li class="ml-4">Purus sodales ultricies</li>
+						      <li class="ml-4">Vestibulum laoreet</li>
+						      <li class="ml-4">Ac tristique libero</li>
+    						 </ul>
+  						</li>
+  
+					</ul>
+		
+	   		</div>
+	   	</div>
+
+	    	<div class="col-md-12 col-xs-12 col-lg-3">
+		
+					<div class="d-flex justify-content-center p-4 mb-2 mt-2" >
+					<ul class=" text-white list-unstyled">
+  							<p class="h4">Contáctenos</p>
+  						<li>
+   							 <ul>
+						      <li class="ml-4"><a href="#" class="alert-link">an example link</a></li>
+						      <li class="ml-4">Purus sodales ultricies</li>
+						      <li class="ml-4">Vestibulum laoreet</li>
+						      <li class="ml-4">Ac tristique libero</li>
+    						 </ul>
+  						</li>
+  
+					</ul>
+		
+	   				</div>
+	    	</div>
+    	</div>	
+	</div>
+</footer>
+
+<div id="fondofinal" class=" p-3 container-fluid">
+	<div class="text-center text-white">Copyright © 2015 Presta Rapid-Todos los derechos reservados.</div>
 </div>
-</div>
-</div>		
-</div>
-</div>
-  </body>
+</body>
 </html>
