@@ -6,6 +6,7 @@ jQuery(function($){
 	});
 });
 
+
 //Smartsupp Live Chat script
 var _smartsupp = _smartsupp || {};
 _smartsupp.key = '1bd189848695f858a608e9d5180c18a3760164f1';
@@ -30,10 +31,39 @@ window.smartsupp||(function(d) {
           min: 100000,
           max: 500000,
           slide: function( event, ui ) {
-            $( "#amount" ).val( '$' + ui.value );
+            //Monto
+            monto = parseInt(ui.value);
+            $( "#monto" ).val( ui.value );
+            $( "#monto_mask" ).val('$ ' + Intl.NumberFormat("de-DE").format(monto));
+            //Monto solicitado
+            $( "#monto_solicitado" ).val( ui.value );
+            $( "#monto_solicitado_mask" ).val('$ ' + Intl.NumberFormat("de-DE").format(monto));
+            //Tasa de interes
+            tasa = monto * 0.38/100; 
+            $( "#tasa" ).val( );
+            $( "#tasa_mask" ).val('$ ' + Intl.NumberFormat("de-DE").format(tasa));
+            //Plataforma
+            plataforma = parseInt($( "#plataforma" ).val());
+            $( "#plataforma_mask" ).val('$ ' + Intl.NumberFormat("de-DE").format(plataforma));
+            //Seguro
+            seguro = monto * 4/100; 
+            $( "#seguro" ).val( seguro );
+            $( "#seguro_mask" ).val('$ ' + Intl.NumberFormat("de-DE").format(seguro));
+            //Subtotal
+            subtotal = monto + tasa + plataforma + seguro; 
+            $( "#subtotal" ).val( subtotal );
+            $( "#subtotal_mask" ).val('$ ' + Intl.NumberFormat("de-DE").format(subtotal));
+            //IVA
+            iva = monto * 0.19;
+            $( "#iva" ).val( '$ ' + iva);
+            $( "#iva_mask" ).val('$ ' + Intl.NumberFormat("de-DE").format(iva));
+            //Total
+            total = subtotal + iva;
+            $( "#total" ).val( '$ ' + total);
+            $( "#total_mask" ).val('$ ' + Intl.NumberFormat("de-DE").format(total));
           }
         });
-        $( "#amount" ).val( '$' + $( "#slider-monto" ).slider( "value" ) );
+        $( "#monto" ).val( '$' + $( "#slider-monto" ).slider( "value" ) );
       } );
 
     //Funcion para los dias
@@ -45,7 +75,13 @@ window.smartsupp||(function(d) {
           min: 4,
           max: 30,
           slide: function( event, ui ) {
-            $( "#dias" ).val(  ui.value );
+            //Monto
+            monto = $( "#monto_solicitado" ).val();
+            $("#dias").val( ui.value);
+            dias = ui.value;
+            tasa = monto * (0.38 * dias) / 100; 
+            $( "#tasa" ).val( tasa );
+            $( "#tasa_mask" ).val('$ ' + Intl.NumberFormat("de-DE").format(tasa));
           }
         });
         $( "#dias" ).val( + $( "#slider-dias" ).slider( "value" ) );
