@@ -102,6 +102,11 @@
   	#slider-dias .ui-slider-handle { 
   		border-color: #ffa841; 
   	}
+
+  	#slider .indicator{
+  		background: red;
+  	}
+
   	#slider-monto {
     	border-radius: 15px;
     	height: 20px;
