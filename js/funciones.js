@@ -23,7 +23,7 @@ window.smartsupp || (function(d) {
 })(document);
 // banner (logo)
 smartsupp('banner:set', 'image', {
-    src: '../images/favicon.png'
+    src: '../images/chat_mini.jpg'
 })
 //Sliders de valores
 //Funcion para el monto
