@@ -95,9 +95,11 @@
 	    background: #0071b8;
 	}
 	#slider-dias .ui-slider-handle {
-	    border-color: #0071b8;
+	    background-color: black;
+	    border-color: white;
 	    border-radius: 30px;
 	    height: 30px;
+	    width: 30px;
 	}
 	#slider .indicator {
 	    background: red;
@@ -112,9 +114,11 @@
 	    height: 20px;
 	}
 	#slider-monto .ui-slider-handle {
-	    border-color: #0071b8;
+	    background-color: black;
+	    border-color: white;
 	    border-radius: 30px;
 	    height: 30px;
+	    width: 30px;
 	}
 	.btn-solicitar {
 	    -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;

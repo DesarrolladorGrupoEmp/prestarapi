@@ -31,7 +31,7 @@ $(function() {
     $("#slider-monto").slider({
         range: "min",
         step: 10000,
-        value: 100000,
+        value: 200000,
         min: 100000,
         max: 500000,
         slide: function(event, ui) {
@@ -74,7 +74,7 @@ $(function() {
     $("#slider-dias").slider({
         range: "min",
         step: 1,
-        value: 4,
+        value: 10,
         min: 4,
         max: 30,
         slide: function(event, ui) {
