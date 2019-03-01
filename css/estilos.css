@@ -12,7 +12,7 @@
 	    background-color: #0E8D2D;
 	}
 	#colordefondoreq {
-	    background-color: #ffa841;
+	    background-color: #0071b8;
 	}
 	.titulo_verde {
 	    color: #0E8D2D;
@@ -31,7 +31,7 @@
 	    background-color: #cccccc;
 	    /* Used if the image is unavailable */
 	    width: 100%;
-	    height: 650px;
+	    height: 700px;
 	    /* You must set a specified height */
 	    background-position: center;
 	    /* Center the image */
@@ -40,14 +40,31 @@
 	    background-size: cover;
 	    /* Resize the background image to cover the entire container */
 	}
+	#contenido {
+	    background-image: url("../images/fondo2.jpg");
+	    /* The image used */
+	    background-color: #cccccc;
+	    /* Used if the image is unavailable */
+	    width: 100%;
+	    height: 650px;
+	    /* You must set a specified height */
+	    background-position: center;
+	    /* Center the image */
+	    background-repeat: no-repeat;
+	    /* Do not repeat the image */
+	    background-size: cover;
+	    /* Resize the background image to cover the entire container */
+	    border-radius: 6px;
+	    box-shadow: 0 0 20px #cccccc;
+	}
 	#aliados {
-	    background-color: #ffa841;
+	    background-color: #0071b8;
 	}
 	footer {
-	    background-color: #1C1C1C;
+	    background-color: #232323;
 	}
 	#fondofinal {
-	    background-color: #0E8D2D;
+	    background-color: #000000;
 	}
 	.monto {
 	    border: 0;
@@ -74,10 +91,13 @@
 	    height: 20px;
 	}
 	#slider-dias .ui-slider-range {
-	    background: #ffa841;
+	    border-radius: 15px;
+	    background: #0071b8;
 	}
 	#slider-dias .ui-slider-handle {
-	    border-color: #ffa841;
+	    border-color: #0071b8;
+	    border-radius: 30px;
+	    height: 30px;
 	}
 	#slider .indicator {
 	    background: red;
@@ -87,10 +107,14 @@
 	    height: 20px;
 	}
 	#slider-monto .ui-slider-range {
-	    background: #ffa841;
+	    background: #0071b8;
+	    border-radius: 15px;
+	    height: 20px;
 	}
 	#slider-monto .ui-slider-handle {
-	    border-color: #ffa841;
+	    border-color: #0071b8;
+	    border-radius: 30px;
+	    height: 30px;
 	}
 	.btn-solicitar {
 	    -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;

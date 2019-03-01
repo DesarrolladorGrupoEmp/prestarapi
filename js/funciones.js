@@ -78,6 +78,8 @@ $(function() {
         min: 4,
         max: 30,
         slide: function(event, ui) {
+            //Dias plazo
+            $("#dias_plazo").val(ui.value);
             //Monto
             monto = $("#monto_solicitado").val();
             $("#dias").val(ui.value);
