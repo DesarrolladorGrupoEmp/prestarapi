@@ -1,3 +1,46 @@
+<?php
+//Recibe las variables
+if (isset($_REQUEST["dias_plazo"])) {
+    $dias_plazo = $_REQUEST["dias_plazo"];
+} else {
+    $dias_plazo = "";
+}
+if (isset($_REQUEST["monto_solicitado_mask"])) {
+    $monto_solicitado = $_REQUEST["monto_solicitado_mask"];
+} else {
+    $monto_solicitado = "";
+}
+if (isset($_REQUEST["tasa_mask"])) {
+    $tasa = $_REQUEST["tasa_mask"];
+} else {
+    $tasa = "";
+}
+if (isset($_REQUEST["plataforma_mask"])) {
+    $plataforma = $_REQUEST["plataforma_mask"];
+} else {
+    $plataforma = "";
+}
+if (isset($_REQUEST["subtotal_mask"])) {
+    $subtotal = $_REQUEST["subtotal_mask"];
+} else {
+    $subtotal = "";
+}
+if (isset($_REQUEST["iva_mask"])) {
+    $iva = $_REQUEST["iva_mask"];
+} else {
+    $iva = "";
+}
+if (isset($_REQUEST["total_mask"])) {
+    $total = $_REQUEST["total_mask"];
+} else {
+    $total = "";
+}
+if (isset($_REQUEST["seguro_mask"])) {
+    $seguro = $_REQUEST["seguro_mask"];
+} else {
+    $seguro = "";
+}
+?>
 <!DOCTYPE doctype html>
 <html lang="es">
     <head>
@@ -514,7 +557,144 @@
                                     </div>
                                     <br/>
                                     <div class="form-row">
-                                        <div class="col-12">
+                                        <div class="col">
+                                            <h3 class="text-center font-italic font-weight-bolder titulo_verde">
+                                                Valores del credito
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="nombres">
+                                                Dias plazo:
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <h5 class="text-right font-weight-bold">
+                                                <?php if ($dias_plazo) {echo $dias_plazo;}?>
+                                            </h5>
+                                        </div>
+                                         <div class="col-lg-3">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="nombres">
+                                                Monto:
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3 text-right">
+                                            <h5 class="font-weight-bold">
+                                                <?php echo $monto_solicitado; ?>
+                                            </h5>
+                                        </div>
+                                        <div class="col-lg-3">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="apellidos">
+                                                Intereses:
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <h5 class="text-right font-weight-bold">
+                                                <?php echo $tasa; ?>
+                                            </h5>
+                                        </div>
+                                        <div class="col-lg-3">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="cedula">
+                                                Plataforma:
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <h5 class="text-right font-weight-bold">
+                                                <?php echo $plataforma; ?>
+                                            </h5>
+                                        </div>
+                                        <div class="col-lg-3">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="nombres">
+                                                Seguro:
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <h5 class="text-right font-weight-bold">
+                                                <?php echo $seguro; ?>
+                                            </h5>
+                                        </div>
+                                        <div class="col-lg-3">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="apellidos">
+                                                Subtotal:
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <h5 class="text-right font-weight-bold">
+                                                <?php echo $subtotal; ?>
+                                            </h5>
+                                        </div>
+                                        <div class="col-lg-3">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="cedula">
+                                                Iva:
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <h5 class="text-right font-weight-bold">
+                                                <?php echo $iva; ?>
+                                            </h5>
+                                        </div>
+                                        <div class="col-lg-3">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <label for="apellidos">
+                                                Total a pagar:
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <h5 class="text-right font-weight-bold">
+                                                <?php echo $total; ?>
+                                            </h5>
+                                        </div>
+                                        <div class="col-lg-3">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-6">
                                             <a href="registro.html">
                                                 <button class="btn-solicitar botonimagen" type="submit">
                                                     <i class="material-icons">
@@ -523,6 +703,8 @@
                                                     Solicitar prestamo ahora
                                                 </button>
                                             </a>
+                                        </div>
+                                        <div class="col-lg-3">
                                         </div>
                                     </div>
                                 </form>

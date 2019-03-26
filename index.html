@@ -295,159 +295,159 @@
                     <div class="p-4 mb-2 mt-2 col-md-12 col-xs-12 col-lg-6">
                         <div id="cajas">
                             <div class="pt-4 pb-3 pl-3 pr-3">
-                                <p>
-                                    <h3 class="text-center font-italic font-weight-bolder titulo_verde">
-                                        REVISA TU CREDITO
-                                    </h3>
-                                    <br>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <h5 class="text-left font-weight-bold">
-                                                    Dias plazo
-                                                </h5>
-                                                <hr>
-                                                </hr>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <input class="valores" id="dias_plazo" type="text-center" value="10">
-                                                </input>
-                                                <hr>
-                                                </hr>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <h5 class="text-left font-weight-bold">
-                                                    Monto solicitado
-                                                </h5>
-                                                <hr>
-                                                </hr>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <input class="valores" hidden="" id="monto_solicitado" type="text-center" value="200000">
-                                                    <input class="valores" id="monto_solicitado_mask" readonly"="" type="text-center" value="$ 200.000">
-                                                        <hr>
-                                                        </hr>
+                                <form action="registro.php" method="POST">
+                                    <p>
+                                        <h3 class="text-center font-italic font-weight-bolder titulo_verde">
+                                            REVISA TU CREDITO
+                                        </h3>
+                                        <br>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <h5 class="text-left font-weight-bold">
+                                                        Dias plazo
+                                                    </h5>
+                                                    <hr>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <input class="valores" id="dias_plazo" name="dias_plazo" type="text-center" value="10">
                                                     </input>
-                                                </input>
+                                                    <hr>
+                                                    </hr>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <h5 class="text-left font-weight-bold">
-                                                    Interes
-                                                </h5>
-                                                <hr>
-                                                </hr>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <input class="valores" hidden="" id="tasa" type="text" value="387">
-                                                    <input class="valores" id="tasa_mask" readonly"="" type="text" value="$ 387">
-                                                        <hr>
-                                                        </hr>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <h5 class="text-left font-weight-bold">
+                                                        Monto solicitado
+                                                    </h5>
+                                                    <hr>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <input class="valores" hidden="" id="monto_solicitado" name="monto_solicitado" type="text-center" value="200000">
+                                                        <input class="valores" id="monto_solicitado_mask" name="monto_solicitado_mask" readonly"="" type="text-center" value="$ 200.000">
+                                                            <hr>
+                                                            </hr>
+                                                        </input>
                                                     </input>
-                                                </input>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <h5 class="text-left font-weight-bold">
-                                                    Plataforma
-                                                </h5>
-                                                <hr>
-                                                </hr>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <input class="valores" hidden="" id="plataforma" type="text" value="10000">
-                                                    <input class="valores" id="plataforma_mask" readonly"="" type="text" value="$ 10.000">
-                                                        <hr>
-                                                        </hr>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <h5 class="text-left font-weight-bold">
+                                                        Interes
+                                                    </h5>
+                                                    <hr>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <input class="valores" hidden="" id="tasa" name="tasa" type="text" value="387">
+                                                        <input class="valores" id="tasa_mask" name="tasa_mask" readonly"="" type="text" value="$ 387">
+                                                            <hr>
+                                                            </hr>
+                                                        </input>
                                                     </input>
-                                                </input>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <h5 class="text-left font-weight-bold">
-                                                    Seguro
-                                                </h5>
-                                                <hr>
-                                                </hr>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <input class="valores" hidden="" id="seguro" type="text" value="4000">
-                                                    <input class="valores" id="seguro_mask" readonly"="" type="text" value="$ 4.000">
-                                                        <hr>
-                                                        </hr>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <h5 class="text-left font-weight-bold">
+                                                        Plataforma
+                                                    </h5>
+                                                    <hr>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <input class="valores" hidden="" id="plataforma" name="plataforma" type="text" value="10000">
+                                                        <input class="valores" id="plataforma_mask" name="plataforma_mask" readonly"="" type="text" value="$ 10.000">
+                                                            <hr>
+                                                            </hr>
+                                                        </input>
                                                     </input>
-                                                </input>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <h5 class="text-left font-weight-bold">
-                                                    Subtotal
-                                                </h5>
-                                                <hr>
-                                                </hr>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <input class="valores" hidden="" id="subtotal" type="text" value="214387">
-                                                    <input class="valores" id="subtotal_mask" readonly"="" type="text" value="$ 214.387">
-                                                        <hr>
-                                                        </hr>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <h5 class="text-left font-weight-bold">
+                                                        Seguro
+                                                    </h5>
+                                                    <hr>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <input class="valores" hidden="" id="seguro" name="seguro" type="text" value="4000">
+                                                        <input class="valores" id="seguro_mask" name="seguro_mask" readonly"="" type="text" value="$ 4.000">
+                                                            <hr>
+                                                            </hr>
+                                                        </input>
                                                     </input>
-                                                </input>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <h5 class="text-left font-weight-bold">
-                                                    IVA
-                                                </h5>
-                                                <hr>
-                                                </hr>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <input class="valores" hidden="" id="iva" type="text" value="19000">
-                                                    <input class="valores" id="iva_mask" readonly"="" type="text" value="$ 19.000">
-                                                        <hr>
-                                                        </hr>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <h5 class="text-left font-weight-bold">
+                                                        Subtotal
+                                                    </h5>
+                                                    <hr>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <input class="valores" hidden="" id="subtotal" name="subtotal" type="text" value="214387">
+                                                        <input class="valores" id="subtotal_mask" name="subtotal_mask" readonly"="" type="text" value="$ 214.387">
+                                                            <hr>
+                                                            </hr>
+                                                        </input>
                                                     </input>
-                                                </input>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <h5 class="text-left font-weight-bold">
-                                                    Total a pagar
-                                                </h5>
-                                                <hr>
-                                                </hr>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                                <input class="valores" hidden="" id="total" type="text" value="233387">
-                                                    <input class="valores" id="total_mask" readonly"="" type="text" value="$ 233.387">
-                                                        <hr>
-                                                        </hr>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <h5 class="text-left font-weight-bold">
+                                                        IVA
+                                                    </h5>
+                                                    <hr>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <input class="valores" hidden="" id="iva" name="iva" type="text" value="19000">
+                                                        <input class="valores" id="iva_mask" name="iva_mask" readonly"="" type="text" value="$ 19.000">
+                                                            <hr>
+                                                            </hr>
+                                                        </input>
                                                     </input>
-                                                </input>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <a href="registro.html">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <h5 class="text-left font-weight-bold">
+                                                        Total a pagar
+                                                    </h5>
+                                                    <hr>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <input class="valores" hidden="" id="total" name="total" type="text" value="233387">
+                                                        <input class="valores" id="total_mask" name="total_mask" readonly"="" type="text" value="$ 233.387">
+                                                            <hr>
+                                                            </hr>
+                                                        </input>
+                                                    </input>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
                                                     <button class="btn-solicitar botonimagen" type="submit">
                                                         <i class="material-icons">
                                                             touch_app
                                                         </i>
                                                         Solicitar prestamo ahora
                                                     </button>
-                                                </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </br>
-                                </p>
+                                        </br>
+                                    </p>
+                                </form>
                             </div>
                         </div>
                     </div>
