@@ -1,13 +1,21 @@
 <?php
+include "../controlador/controllerregistro.php";
 //Recibe las variables
-$monto_solicitado = isset($_POST["monto_solicitado_mask"]) ? $_POST["monto_solicitado_mask"] : null;
-$dias_plazo       = isset($_POST["dias_plazo"]) ? $_POST["dias_plazo"] : null;
-$tasa             = isset($_POST["tasa_mask"]) ? $_POST["tasa_mask"] : null;
-$plataforma       = isset($_POST["plataforma_mask"]) ? $_POST["plataforma_mask"] : null;
-$seguro           = isset($_POST["seguro_mask"]) ? $_POST["seguro_mask"] : null;
-$subtotal         = isset($_POST["subtotal_mask"]) ? $_POST["subtotal_mask"] : null;
-$iva              = isset($_POST["iva_mask"]) ? $_POST["iva_mask"] : null;
-$total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
+$monto           = isset($_POST["monto_solicitado"]) ? $_POST["monto_solicitado"] : null;
+$monto_mask      = isset($_POST["monto_solicitado_mask"]) ? $_POST["monto_solicitado_mask"] : null;
+$dias_plazo      = isset($_POST["dias_plazo"]) ? $_POST["dias_plazo"] : null;
+$tasa            = isset($_POST["tasa"]) ? $_POST["tasa"] : null;
+$tasa_mask       = isset($_POST["tasa_mask"]) ? $_POST["tasa_mask"] : null;
+$plataforma      = isset($_POST["plataforma"]) ? $_POST["plataforma"] : null;
+$plataforma_mask = isset($_POST["plataforma_mask"]) ? $_POST["plataforma_mask"] : null;
+$seguro          = isset($_POST["seguro"]) ? $_POST["seguro"] : null;
+$seguro_mask     = isset($_POST["seguro_mask"]) ? $_POST["seguro_mask"] : null;
+$subtotal        = isset($_POST["subtotal"]) ? $_POST["subtotal"] : null;
+$subtotal_mask   = isset($_POST["subtotal_mask"]) ? $_POST["subtotal_mask"] : null;
+$iva             = isset($_POST["iva"]) ? $_POST["iva"] : null;
+$iva_mask        = isset($_POST["iva_mask"]) ? $_POST["iva_mask"] : null;
+$total           = isset($_POST["total"]) ? $_POST["total"] : null;
+$total_mask      = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
 ?>
 <div classs="container-fluid" id="fondo_registro">
     <div class="container">
@@ -15,7 +23,7 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
             <div class="p-4 mb-2 mt-2 col-md-12 col-xs-12 col-lg-12">
                 <div id="cajas">
                     <div class="justify-content-center pt-4 pb-3 pl-3 pr-3" id="bordes">
-                        <form action="procesar.php" class="form" method="POST">
+                        <form class="form" method="POST" id="form_registro">
                             <div class="form-row">
                                 <div class="col">
                                     <h3 class="text-center font-italic font-weight-bolder titulo_verde">
@@ -31,7 +39,7 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                     </label>
                                 </div>
                                 <div class="col">
-                                    <input id="nombres" name="nombres" placeholder="Nombres" type="text"/>
+                                    <input id="nombres" name="nombres" placeholder="Nombres" type="text" required="true" />
                                 </div>
                                 <div class="col ">
                                     <label for="apellidos">
@@ -87,25 +95,15 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 <div class="col ">
                                     <input id="correo" name="correo" placeholder="ejemplo@email.com"/>
                                 </div>
-                                <div class="col ">
-                                    <label for="direccion">
-                                        Contraseña:
-                                    </label>
-                                </div>
-                                <div class="col ">
-                                    <input id="contrasena" name="contrasena" placeholder="contraseña" type="password"/>
-                                </div>
                                 <div class="col">
                                     <label for="direccion">
                                         Direccion:
                                     </label>
                                 </div>
-                                <div class="col">
-                                    <input id="direccion" name="direccion" placeholder="Direccion" type="text"/>
+                                <div class="col ">
+                                    <input id="direccion" name="direccion" placeholder="Direccion"/>
                                 </div>
-                            </div>
-                            <br/>
-                            <div class="form-row">
+
                                 <div class="col">
                                     <label for="FKciudad">
                                         Ciudad:
@@ -124,6 +122,9 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                         </option>
                                     </select>
                                 </div>
+                            </div>
+                            <br/>
+                            <div class="form-row">
                                 <div class="col">
                                     <label for="FKtipoVivienda">
                                         Vivienda:
@@ -143,89 +144,20 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <label for="cuenta">
-                                        Cuenta:
-                                    </label>
-                                </div>
-                                <div class="col ">
-                                    <input id="cuenta" name="cuenta" placeholder="Cuenta bancaria" type="text"/>
-                                </div>
-                            </div>
-                            <br/>
-                            <div class="form-row">
-                                <div class="col">
-                                    <label for="tipoContrato">
-                                        Tipo contrato:
-                                    </label>
-                                </div>
-                                <div class="col">
-                                    <select class="lista" id="tipoContrato" name="tipoContrato">
-                                        <option selected="">
-                                            Seleccione...
-                                        </option>
-                                        <option value="1">
-                                            Fijo
-                                        </option>
-                                        <option value="2">
-                                            Indefinidio
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="col">
-                                    <label for="empleador">
-                                        Empleador:
-                                    </label>
-                                </div>
-                                <div class="col">
-                                    <input id="empleador" name="empleador" placeholder="Empleador" type="text"/>
-                                </div>
-                                <div class="col">
-                                    <label for="telEmpleador">
-                                        Tel Empleador:
-                                    </label>
-                                </div>
-                                <div class="col">
-                                    <input id="telEmpleador" name="telEmpleador" placeholder="Telefono Empleador" type="tel"/>
-                                </div>
-                            </div>
-                            <br/>
-                            <div class="form-row">
-                                <div class="col">
-                                    <label for="antiguedad">
-                                        Antiguedad:
-                                    </label>
-                                </div>
-                                <div class="col">
-                                    <input id="antiguedad" name="antiguedad" placeholder="Antiguedad laboral" type="text"/>
-                                </div>
-                                <div class="col">
-                                    <label for="ingresos">
-                                        Ingresos:
-                                    </label>
-                                </div>
-                                <div class="col">
-                                    <input id="ingresos" name="ingresos" placeholder="Ingresos mensuales" type="text"/>
-                                </div>
-                                <div class="col">
                                     <label for="contacto">
                                         Contacto:
                                     </label>
                                 </div>
-                                <div class="col">
-                                    <input id="contacto" name="contacto" placeholder="Nombre contacto" type="text"/>
+                                <div class="col ">
+                                    <input id="contacto" name="contacto" placeholder="Contacto" type="text"/>
                                 </div>
-                            </div>
-                            <br/>
-                            <div class="form-row">
                                 <div class="col">
                                     <label for="celularContacto">
                                         Celular:
                                     </label>
                                 </div>
-                                <div class="col">
-                                    <input id="celularContacto" name="celularContacto" placeholder="Celular contacto" type="text"/>
-                                </div>
-                                <div class="col-md-8">
+                                <div class="col ">
+                                    <input id="celularContacto" name="celularContacto" placeholder="Celular Contacto" type="text"/>
                                 </div>
                             </div>
                             <br/>
@@ -295,6 +227,73 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 </div>
                             </div>
                             <br/>
+                             <div class="form-row">
+                                <div class="col">
+                                    <label for="FKtipocontrato">
+                                        Tipo contrato:
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <select class="lista" id="FKtipocontrato" name="FKtipocontrato">
+                                        <option selected="">
+                                            Seleccione...
+                                        </option>
+                                        <option value="1">
+                                            Fijo
+                                        </option>
+                                        <option value="2">
+                                            Indefinidio
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="empleador">
+                                        Empleador:
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <input id="empleador" name="empleador" placeholder="Empleador" type="text"/>
+                                </div>
+                                <div class="col">
+                                    <label for="telEmpleador">
+                                        Tel Empleador:
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <input id="telefonoEmpleador" name="telefonoEmpleador" placeholder="Telefono Empleador" type="tel"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="cuentaBancaria">
+                                        Cuenta:
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <input id="cuentaBancaria" name="cuentaBancaria" placeholder="Cuenta Bancaria" type="text"/>
+                                </div>
+                                <div class="col">
+                                    <label for="antiguedad">
+                                        Antiguedad:
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <input id="antiguedad" name="antiguedad" placeholder="Antiguedad laboral" type="text"/>
+                                </div>
+                                <div class="col">
+                                    <label for="ingresos">
+                                        Ingresos:
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <input id="ingresos" name="ingresos" placeholder="Ingresos mensuales" type="text"/>
+                                </div>
+                            </div>
+                            <br/>
+                        </form>
+                        <br/>
+                        <form class="form" method="POST" id="form_solicitud">
                             <div class="form-row">
                                 <div class="col">
                                     <h3 class="text-center font-italic font-weight-bolder titulo_verde">
@@ -306,7 +305,7 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 <div class="col-lg-3">
                                 </div>
                                 <div class="col-lg-3">
-                                    <label for="nombres">
+                                    <label for="dias">
                                         Dias plazo:
                                     </label>
                                 </div>
@@ -314,6 +313,7 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                     <h5 class="text-right font-weight-bold">
                                         <?php if ($dias_plazo) {echo $dias_plazo;}?>
                                     </h5>
+                                    <input type="hidden" name="dias" id="dias" value="<?php echo $dias_plazo; ?>">
                                 </div>
                                 <div class="col-lg-3">
                                 </div>
@@ -328,8 +328,9 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 </div>
                                 <div class="col-lg-3 text-right">
                                     <h5 class="font-weight-bold">
-                                        <?php echo $monto_solicitado; ?>
+                                        <?php echo $monto_mask; ?>
                                     </h5>
+                                    <input type="hidden" name="monto" id="monto" value="<?php echo $monto; ?>">
                                 </div>
                                 <div class="col-lg-3">
                                 </div>
@@ -344,8 +345,9 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 </div>
                                 <div class="col-lg-3">
                                     <h5 class="text-right font-weight-bold">
-                                        <?php echo $tasa; ?>
+                                        <?php echo $tasa_mask; ?>
                                     </h5>
+                                    <input type="hidden" name="interes" id="interes" value="<?php echo $tasa; ?>">
                                 </div>
                                 <div class="col-lg-3">
                                 </div>
@@ -360,8 +362,9 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 </div>
                                 <div class="col-lg-3">
                                     <h5 class="text-right font-weight-bold">
-                                        <?php echo $plataforma; ?>
+                                        <?php echo $plataforma_mask; ?>
                                     </h5>
+                                    <input type="hidden" name="plataforma" id="plataforma" value="<?php echo $plataforma; ?>">
                                 </div>
                                 <div class="col-lg-3">
                                 </div>
@@ -376,8 +379,9 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 </div>
                                 <div class="col-lg-3">
                                     <h5 class="text-right font-weight-bold">
-                                        <?php echo $seguro; ?>
+                                        <?php echo $seguro_mask; ?>
                                     </h5>
+                                    <input type="hidden" name="seguro" id="seguro" value="<?php echo $seguro; ?>">
                                 </div>
                                 <div class="col-lg-3">
                                 </div>
@@ -392,8 +396,9 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 </div>
                                 <div class="col-lg-3">
                                     <h5 class="text-right font-weight-bold">
-                                        <?php echo $subtotal; ?>
+                                        <?php echo $subtotal_mask; ?>
                                     </h5>
+                                    <input type="hidden" name="subtotal" id="subtotal" value="<?php echo $subtotal; ?>">
                                 </div>
                                 <div class="col-lg-3">
                                 </div>
@@ -408,8 +413,9 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 </div>
                                 <div class="col-lg-3">
                                     <h5 class="text-right font-weight-bold">
-                                        <?php echo $iva; ?>
+                                        <?php echo $iva_mask; ?>
                                     </h5>
+                                    <input type="hidden" name="iva" id="iva" value="<?php echo $iva; ?>">
                                 </div>
                                 <div class="col-lg-3">
                                 </div>
@@ -424,8 +430,9 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 </div>
                                 <div class="col-lg-3">
                                     <h5 class="text-right font-weight-bold">
-                                        <?php echo $total; ?>
+                                        <?php echo $total_mask; ?>
                                     </h5>
+                                    <input type="hidden" name="total" id="total" value="<?php echo $total; ?>">
                                 </div>
                                 <div class="col-lg-3">
                                 </div>
@@ -434,7 +441,7 @@ $total            = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
                                 <div class="col-lg-3">
                                 </div>
                                 <div class="col-6">
-                                    <button class="btn-solicitar botonimagen" type="submit">
+                                    <button class="btn-solicitar botonimagen" id="solicitar">
                                         <i class="material-icons">
                                             touch_app
                                         </i>

@@ -1,5 +1,5 @@
 <?php
-include "conexion.php";
+include "../Conexion/Conexion.php";
 class registro
 {
     public function registro()
