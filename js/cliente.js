@@ -1,5 +1,4 @@
 $(function() {
-    console.log('hola desde registro');
     //---------------------------------------------------------
     //variable para el objeto del formulario
     var objt_f_cliente = {};
@@ -8,27 +7,41 @@ $(function() {
     //---------------------------------------------------------
     //cierra funcion
     $("#solicitar").click(function() {
-        var datos = $("#form_registro").serialize();
+        var datos = $("#form_cliente").serialize();
         $.ajax({
             type: "POST",
             url: "../controlador/ajaxController.php",
             data: datos + "&tipo=inserta_registro&nom_tabla=cliente",
             success: function(r) {
-                registrar_solicitud();
-                alert(r[0]["mensaje"]);
+                registrar_cliente();
+                registrar_solicitud(r[0]["last_id"]);
             }
         });
         return false;
     });
-
-    function registrar_solicitud() {
+    //Registra valor en la tabla de cliente
+    function registrar_cliente() {
+        var datos = $("#form_cliente").serialize();
+        $.ajax({
+            type: "POST",
+            url: "../controlador/ajaxController.php",
+            data: datos + "&tipo=inserta_registro&nom_tabla=clente",
+            success: function(r) {}
+        });
+    }
+    //Registra valores en tabla de solicitud
+    function registrar_solicitud(id) {
         var datos = $("#form_solicitud").serialize();
+        var f = new Date();
+        fecha = (f.getFullYear() + "-" + (f.getMonth() + 1) + "-" + f.getDate());
+        datos = "FKcliente=" + id + "&fecha=" + fecha + "&" + datos;
         $.ajax({
             type: "POST",
             url: "../controlador/ajaxController.php",
             data: datos + "&tipo=inserta_registro&nom_tabla=solicitud",
             success: function(r) {
-                //alert(r[0]["mensaje"]);
+                alert(r[0]["mensaje"]);
+                location.href = "../";
             }
         });
     }

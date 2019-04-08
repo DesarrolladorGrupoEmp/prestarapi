@@ -32,6 +32,7 @@ class GenericoDAO
         if (!$result = $db->query($query)) {
             die('There was an error running the query [' . $db->error . ']');
         } else {
+            $this->r["last_id"] = $db->insert_id;
             $this->r["estado"]  = "ok";
             $this->r["mensaje"] = "Guardado correctamente.";
 

@@ -1,7 +1,18 @@
 <?php
 include "../controlador/controllerregistro.php";
 //Recibe las variables
-$monto           = isset($_POST["monto_solicitado"]) ? $_POST["monto_solicitado"] : null;
+$monto = isset($_POST["monto_solicitado"]) ? $_POST["monto_solicitado"] : null;
+
+//Verifica que lleguen valores del credito
+if ($monto == '') {
+    ?>
+<script type="text/javascript">
+    alert('El valor del monto debe ser mayor a 0');
+    window.location="../";
+</script>
+<?php
+}
+
 $monto_mask      = isset($_POST["monto_solicitado_mask"]) ? $_POST["monto_solicitado_mask"] : null;
 $dias_plazo      = isset($_POST["dias_plazo"]) ? $_POST["dias_plazo"] : null;
 $tasa            = isset($_POST["tasa"]) ? $_POST["tasa"] : null;
@@ -23,7 +34,7 @@ $total_mask      = isset($_POST["total_mask"]) ? $_POST["total_mask"] : null;
             <div class="p-4 mb-2 mt-2 col-md-12 col-xs-12 col-lg-12">
                 <div id="cajas">
                     <div class="justify-content-center pt-4 pb-3 pl-3 pr-3" id="bordes">
-                        <form class="form" method="POST" id="form_registro">
+                        <form class="form" method="POST" id="form_cliente">
                             <div class="form-row">
                                 <div class="col">
                                     <h3 class="text-center font-italic font-weight-bolder titulo_verde">

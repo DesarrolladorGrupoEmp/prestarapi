@@ -51,10 +51,6 @@ class Conexion
     {
 
         $this->stringconection = new mysqli($this->hostconection, $this->userconection, $this->passconection, $this->dbconection);
-        /*
-        if($db->connect_errno > 0){
-        die('Error en la conexion con la base de datos [' . $db->connect_error . ']');
-        }*/
 
         $conn = $this->stringconection;
 
